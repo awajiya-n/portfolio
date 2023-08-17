@@ -1,0 +1,54 @@
+.display{
+    display: flex;
+    margin: 20px auto 20px;
+}
+
+.playdisplay{
+    width:500px;
+    margin:10px;
+}
+
+.p1Dis{
+    background-color: rgb(255, 180, 180);
+}
+
+.p2Dis{
+    background-color: rgb(180, 180, 255);
+}
+
+.status{
+    text-align: center;
+    background-color: lightblue;
+}
+
+.potionR{
+    width:15px; text-align: center;
+}
+
+.displayS{
+    width:30px; text-align: center;
+}
+
+.information{
+    text-align: center;
+}
+
+.info{
+    width:500px; height: 30px; text-align: center; font-size: large; font-weight: bolder;
+}
+
+.turn{
+    width:600px; height: 30px; text-align: center; font-size: large; font-weight: bolder;
+}
+
+.examWindow{
+    text-align: center;
+}
+
+.reload{
+    text-align: center;
+}
+
+.audio{
+    text-align: right;
+}

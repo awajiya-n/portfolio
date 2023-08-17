@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Game</title>
+    <script src="index.js"></script>
+    <script>window.moveTo(570, 0)</script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="examOpen('on')">
+    <!-- ゲーム管理画面 -->
+    <section class="display">
+        <!-- Player1 コマンド画面 -->
+        <div class="playdisplay  p1Dis">
+            <h1 style="text-align: center; background-color: red; color: white;">PLAYER 1</h1>
+            <h3>　攻撃</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="攻撃" style="width:120px" onclick="attack1();"></li>
+            </ol>
+            <h3>　魔法</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="ファイヤー" style="width:120px" onclick="magic1('fire');"> (消費MP:3)</li>
+                <li><input type="button" value="アイス" style="width:120px" onclick="magic1('ice');"> (消費MP:5)</li>
+                <li><input type="button" value="ヒール" style="width:120px" onclick="magic1('heal');"> (消費MP:2)</li>
+            </ol>
+            <h3>　道具</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="HPポーション" style="width:120px" onclick="item1('HpPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p1hpp">個
+                </li>
+                <li><input type="button" value="MPポーション" style="width:120px" onclick="item1('MpPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p1mpp">個
+                </li>
+                <li><input type="button" value="筋力ポーション" style="width:120px" onclick="item1('PowerPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p1pwp">個
+                </li>
+                <li><input type="button" value="硬化ポーション" style="width:120px" onclick="item1('StonePotion');">
+                    　残り<input type="text" value="" class="potionR" id="p1dfp">個
+                </li>
+            </ol>
+        </div>
+
+        <!-- ステータス表示画面 -->
+        <div class="playdisplay status">
+            <h1 style="text-align: center; background-color: black; color: white;">ステータス</h1>
+            <h3 style="color:red;">PLAYER 1</h3>
+            <p>残りHP:<input type="text" value="0" class="displayS" id="player1hp"></input></p>
+            <p>残りMP:<input type="text" value="0" class="displayS" id="player1mp"></input></p>
+            <p>
+                攻撃力:<input type="text" value="0" class="displayS" id="player1pw"></input>
+                防御力:<input type="text" value="0" class="displayS" id="player1df"></input>
+            </p>
+            <br>
+            <h3 style="color:blue;">PLAYER 2</h3>
+            <p>残りHP:<input type="text" value="0" class="displayS" id="player2hp"></input></p>
+            <p>残りMP:<input type="text" value="0" class="displayS" id="player2mp"></input></p>
+            <p>
+                攻撃力:<input type="text" value="0" class="displayS" id="player2pw"></input>
+                防御力:<input type="text" value="0" class="displayS" id="player2df"></input>
+            </p>
+        </div>
+
+        <!-- Player2 コマンド画面 -->
+        <div class="playdisplay p2Dis">
+            <h1 style="text-align: center; background-color: blue; color: white;">PLAYER 2</h1>
+            <h3>　攻撃</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="攻撃" style="width:120px" onclick="attack2();"></li>
+            </ol>
+            <h3>　魔法</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="ファイヤー" style="width:120px" onclick="magic2('fire');"> (消費MP:3)</li>
+                <li><input type="button" value="アイス" style="width:120px" onclick="magic2('ice');"> (消費MP:5)</li>
+                <li><input type="button" value="ヒール" style="width:120px" onclick="magic2('heal');"> (消費MP:2)</li>
+            </ol>
+            <h3>　道具</h3>
+            <ol style="list-style-type:none">
+                <li><input type="button" value="HPポーション" style="width:120px" onclick="item2('HpPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p2hpp">個
+                </li>
+                <li><input type="button" value="MPポーション" style="width:120px" onclick="item2('MpPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p2mpp">個
+                </li>
+                <li><input type="button" value="筋力ポーション" style="width:120px" onclick="item2('PowerPotion');">
+                    　残り<input type="text" value="" class="potionR" id="p2pwp">個
+                </li>
+                <li><input type="button" value="硬化ポーション" style="width:120px" onclick="item2('StonePotion');">
+                    　残り<input type="text" value="" class="potionR" id="p2dfp">個
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ターン情報表示 -->
+    <div class="information">
+        <input type="text" value="" class="info" id="info">
+        <br>
+        <br>
+        <input type="text" value="" class="turn" id="turn">
+    </div>
+    <br>
+
+    <!-- 説明画面ボタン -->
+    <div class="examWindow">
+        <input type="button" value="説明画面を開く" onclick="examOpen()">
+    </div>
+    <!-- リロードボタン -->
+    <div class="reload">
+        <input type="button" value="再戦する" onclick="reload()">
+    </div>
+
+    <!-- 音楽再生 -->
+    <div class="audio">
+        <audio type="audio/mp3" src="./battle.mp3" controls loop></audio>
+    </div>
+
+    <!-- リアルタイム表示管理 -->
+    <script>
+        setInterval(showStatus, 500)
+        setInterval(showPotion, 500)
+        setInterval(showInfo, 500)
+    </script>
+
+</body>
+
+</html>

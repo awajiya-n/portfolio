@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>説明</title>
+</head>
+
+<body>
+    <h3>ルール</h3>
+    <p>PLAYER1から交互にコマンドを選択し、相手のHPを0にすると勝利</p>
+
+    <h3>プレイヤーステータス</h3>
+    <ol style="list-style-type: none;">
+        <li>最大HP:50</li>
+        <li>最大MP:15</li>
+        <li>初期攻撃力:5</li>
+        <li>初期防御力:0 (防御力の値分「攻撃」からのダメージを減らす)</li>
+    </ol>
+    <br>
+    <h3>コマンド</h3>
+    <ol style="list-style-type: none;">
+        <li>攻撃
+            <li>　自分の攻撃力 + (0 ～ 2)  ダメージ</li>
+        </li>
+        <br>
+        <li>魔法
+            <li>・ファイヤー: 相手に 1 ～ 15 のダメージ 消費MP:3</li>
+            <li>・アイス: 相手に 3 ～ 20 のダメージ 消費MP:5</li>
+            <li>・ヒール: 自分のHPを 5 ～ 15 回復 消費MP:2</li>
+        </li>
+        <br>
+        <li>
+            道具
+            <li>・HPポーション: 自分のHPが 8 ～ 12 回復
+            <br>　　　※ 後攻のPLAYER 2 は＋1個
+            </li>
+            <li>・MPポーション: 自分のHPが 3 ～ 8 回復</li>
+            <li>・筋力ポーション: 自分の攻撃力が 3 ～ 5 上昇</li>
+            <li>・硬化ポーション: 自分の防御力が 1 ～ 5 上昇</li>
+        </li>
+    </ol>
+    <form>
+        <p>
+            <input type="button" value="閉じる" onclick="window.close()">
+        </p>
+    </form>
+
+</body>
+
+</html>
+
+</html>
