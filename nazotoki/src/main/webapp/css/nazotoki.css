@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body {
+    background-image: url(img/mikanbakoicon.jpg);
+    background-color: orange;
+    background-blend-mode: soft-light;
+}
+
+.main {
+    width: 650px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+h1 {
+    background-color: red;
+}
+
+h2 {
+    background-color: lightgreen;
+    text-align: center;
+}
+
+h3 {
+    background-color: blueviolet;
+    text-align: left;
+}
+
+p {
+    background-color: white;
+    text-align: left;
+}
+
+a {
+    text-align: left;
+}
+
+.mondaibun {
+    font-weight: bold;
+    text-align: left;
+    font-family: 'DotGothic16', sans-serif;
+    letter-spacing: 1px;
+}
+
+.kimarimonku{ 
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 150%;
+    text-align: center;
+}
+
+.linkformikanbako {
+    background-color: aqua;
+}
+
+.twittersenden {
+    width: 150px;
+}
+
+.twittersenden p {
+    text-align: center;
+}
+
+.twittersenden img {
+    height: 50px;
+    width: 50px;
+    background-color: rgba( 0, 0, 0, 0);
+}
+
+.onepiece {
+    width: 600px;
+    margin: 0 auto;
+    display:flex grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 20px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.onepiece img {
+    height: 100px;
+    width: 100px;
+    background-color: rgba( 255, 255, 255, .5);
+    border-radius: 10%;
+}
+
+.senden {
+    /* margin: 0 auto; */
+    width: 250px;
+}
+
+.senden a {
+    color: orangered;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.goiken textarea{
+    width: 400px;
+}
+
+.goiken p {
+    width: 250px;
+    text-align: center;
+}
+
+.button {
+    width: 50px;
+}
+
+.lastq {
+    text-align: center;
+}
