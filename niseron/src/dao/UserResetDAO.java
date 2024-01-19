@@ -31,6 +31,7 @@ public class UserResetDAO {
 			sql = "UPDATE USER SET WIN = 0,LOSE = 0 WHERE USER_ID = ?";
 			pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1,user.getUserId());
+			// UPDATE文を実行
 			pStmt.executeUpdate();
 
 		}catch (SQLException e)

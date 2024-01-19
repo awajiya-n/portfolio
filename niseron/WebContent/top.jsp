@@ -16,8 +16,8 @@
 <h2>ニセロンへようこそ！</h2>
 <dl>
 <dt class="pr1"><h3>ニセロンとは？</h3></dt>
-<dd>ヌメロンのパクリです</dd>
-<dd>ヌメロンのルールについては<a href="https://ja.wikipedia.org/wiki/Numer0n#%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank">コチラ</a>を参照</dd>
+<dd>ヌ〇ロンのパクリです</dd>
+<dd>〇メロンのルールについては<a href="https://ja.wikipedia.org/wiki/Numer0n#%E3%83%AB%E3%83%BC%E3%83%AB" target="_blank">コチラ</a>を参照</dd>
 </dl>
 
 <dl>
@@ -36,7 +36,6 @@
 <input type="hidden" name="userType" value="u">
 </form>
 
-<br>
 <form action="/niseron/LoginServlet" method="get">
 <dl>
 <dd><h4>ゲストログイン</h4></dd>

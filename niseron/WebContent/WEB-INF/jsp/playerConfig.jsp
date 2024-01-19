@@ -11,14 +11,15 @@
 
 <style>
 .pr1 {text-decoration: underline;}
-fieldset {width:130px}
-h4 {background:lightgreen; padding:10px; width:120px; height:15px; padding:5px;}
+fieldset {width:110px}
+h4 {background:lightgreen; padding:10px; width:180px; height:15px; padding:5px;}
 </style>
 
 </head>
 <body>
 
 <h2>ようこそ <%=user.getName() %>さん！</h2>
+<% if(user.getUserType().equals("u")){ %>
 <br>
 <h3>対戦成績</h3>
 <%= user.getWinPoint() %>勝 <%= user.getLosePoint() %>敗
@@ -26,7 +27,9 @@ h4 {background:lightgreen; padding:10px; width:120px; height:15px; padding:5px;}
 <% if(user.getWinPoint()+user.getLosePoint()!=0){ %>
 <br>
 勝率：<%= (double)Math.round(winningRate*1000)/10 %> %
-<% } %><br>
+<% } %>
+<br>
+<% } %>
 <br>
 <form action="/niseron/CardCheckServlet" method="post">
 <dl>

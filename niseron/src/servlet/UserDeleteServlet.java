@@ -34,13 +34,15 @@ public class UserDeleteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// ログインしたユーザー情報をスコープから取得する
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("user");
 
+		// ユーザー削除DAOを実行する
 		UserDeleteDAO ud = new UserDeleteDAO();
 		ud.UserReset(user);
 
+		// ユーザー削除完了画面へフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/userDeleteComplete.jsp");
 		dispatcher.forward(request, response);
 	}

@@ -77,5 +77,20 @@ else if(firstPlayer.equals("rival")){turnPlayerUseCard = rivalUseCard;}
 <input type="hidden" name="settingFlag" value="2">
 <input type="submit" value="決定">
 </form>
+<br>
+現在選択されている数字
+<%
+if(turnPlayerUseCard.getFirstNumber() == 99999){
+%>
+	■■■
+<%
+}else if(turnPlayerUseCard.getFirstNumber() != 99999 && turnPlayerUseCard.getSecondNumber() == 99999){
+%>
+	<%= turnPlayerUseCard.getFirstNumber()+"■■" %>
+<%
+}else if(turnPlayerUseCard.getSecondNumber() != 99999){
+%>
+	<%= Integer.valueOf(turnPlayerUseCard.getFirstNumber()).toString()+turnPlayerUseCard.getSecondNumber()+"■" %>
+<% };%>
 </body>
 </html>

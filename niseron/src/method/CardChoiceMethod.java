@@ -3,6 +3,7 @@ package method;
 import model.CardDate;
 
 public class CardChoiceMethod {
+	// 現在の所持数字カード数から使用するカードを減らしてインスタンスを返す
 	public static CardDate numberCardReduser(CardDate cardDate,int number) {
 		switch(number) {
 		case 0:
@@ -39,6 +40,7 @@ public class CardChoiceMethod {
 		return cardDate;
 	}
 
+	// 現在の所持アイテムカード数から使用するカードを減らしてインスタンスを返す
 	public static CardDate itemCardReduser(CardDate cardDate,String item) {
 		switch(item) {
 		case "double":
@@ -63,6 +65,7 @@ public class CardChoiceMethod {
 		return cardDate;
 	}
 
+	// 現在の所持数字カード数から獲得したカードを増やしてインスタンスを返す
 	public static CardDate numberCardRaiser(CardDate cardDate,int number) {
 		switch(number) {
 		case 0:
@@ -99,6 +102,7 @@ public class CardChoiceMethod {
 		return cardDate;
 	}
 
+	// 現在の所持アイテムカード数から獲得したカードを増やしてインスタンスを返す
 	public static CardDate itemCardRaiser(CardDate cardDate,String item) {
 		switch(item) {
 		case "double":

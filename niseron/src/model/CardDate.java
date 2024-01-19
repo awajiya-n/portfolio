@@ -21,17 +21,17 @@ public class CardDate {
 	private int change_c;
 
 	public CardDate(){
-		this.no_0 = 2;
-		this.no_1 = 2;
-		this.no_2 = 2;
-		this.no_3 = 2;
-		this.no_3 = 2;
-		this.no_4 = 2;
-		this.no_5 = 2;
-		this.no_6 = 2;
-		this.no_7 = 2;
-		this.no_8 = 2;
-		this.no_9 = 2;
+		this.no_0 = 1;
+		this.no_1 = 1;
+		this.no_2 = 1;
+		this.no_3 = 1;
+		this.no_3 = 1;
+		this.no_4 = 1;
+		this.no_5 = 1;
+		this.no_6 = 1;
+		this.no_7 = 1;
+		this.no_8 = 1;
+		this.no_9 = 1;
 
 		this.double_c = 0;
 		this.highlow_c = 0;

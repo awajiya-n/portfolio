@@ -34,13 +34,15 @@ public class UserResetServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// ログインしたユーザー情報をスコープから取得する
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("user");
 
+		// ユーザー情報リセットDAOを実行する
 		UserResetDAO ur = new UserResetDAO();
 		ur.UserReset(user);
 
+		// ユーザー情報リセット完了画面へフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/userResetComplete.jsp");
 		dispatcher.forward(request, response);
 	}

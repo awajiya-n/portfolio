@@ -25,10 +25,11 @@ public class PlayResultDAO {
 			pStmt.setInt(1,user.getUserId());
 			// SELECT文を実行し、結果表を取得
 			ResultSet rs = pStmt.executeQuery();
-			// 勝利数を変数に保存
+			// 勝利数を更新する
 			while(rs.next()) {
+				// 現在の勝利数を変数に保存
 				int winCount = rs.getInt("WIN");
-				// UPDATE文を用意し、勝利数を更新する
+				// UPDATE文を用意し、勝利数に1を足して更新する
 				sql = "UPDATE USER SET WIN = ? WHERE USER_ID = ?" ;
 				pStmt = conn.prepareStatement(sql);
 				pStmt.setInt(1,winCount+1);
@@ -80,10 +81,11 @@ public class PlayResultDAO {
 			pStmt.setInt(1,user.getUserId());
 			// SELECT文を実行し、結果表を取得
 			ResultSet rs = pStmt.executeQuery();
-			// 敗北数を変数に保存
+			// 敗北数を更新する
 			while(rs.next()) {
+				// 敗北数を変数に保存
 				int loseCount = rs.getInt("LOSE");
-				// UPDATE文を用意し、敗北数を更新する
+				// UPDATE文を用意し、敗北数に1を足して更新する
 				sql = "UPDATE USER SET LOSE = ? WHERE USER_ID = ?" ;
 				pStmt = conn.prepareStatement(sql);
 				pStmt.setInt(1,loseCount+1);
